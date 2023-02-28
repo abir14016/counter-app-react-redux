@@ -6,7 +6,7 @@ import { DECREMENT, INCREMENT } from "./actionTypes"
 
 //initial state
 const initialState = {
-    value: 0
+    value: 20
 };
 
 //reducer function
@@ -15,12 +15,12 @@ const counterReducer = (state = initialState, action) => {
         case INCREMENT:
             return {
                 ...state,
-                value: state.value + 1
+                value: state.value + action.payLoad
             };
         case DECREMENT:
             return {
                 ...state,
-                value: state.value - 1
+                value: state.value - action.payLoad
             };
         default:
             return state

@@ -5,7 +5,7 @@ import { INCREMENT, DECREMENT } from "./actionTypes"
 export const increment = (value) => {
     return {
         type: INCREMENT,
-        paLoad: value
+        payLoad: value
     };
 };
 
@@ -13,6 +13,6 @@ export const increment = (value) => {
 export const decrement = (value) => {
     return {
         type: DECREMENT,
-        paLoad: value
+        payLoad: value
     };
 };
