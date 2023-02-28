@@ -1,4 +1,4 @@
 //action types file
 
-export const INCREMENT = "increment";
-export const DECREMENT = "decrement";
+export const INCREMENT = "counter/increment";
+export const DECREMENT = "counter/decrement";
