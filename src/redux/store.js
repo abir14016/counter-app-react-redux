@@ -1,19 +1,9 @@
 import { applyMiddleware, createStore } from "redux";
+import myLogger from "./middlewares/myLogger";
 import rootReducer from "./rootReducer";
-
-//custom middleware
-const myLogger = (store) => (next) => (action) => {
-    console.log(`Action: ${JSON.stringify(action)}`);
-    console.log(`Before: ${JSON.stringify(store.getState())}`);
-
-    const upComingState = [action].reduce(rootReducer, store.getState());
-    console.log(`Upcoming State: ${JSON.stringify(upComingState)}`)
-
-    //passing action
-    next(action);
-}
+import logger from "redux-logger";
 
 //creating store
-const store = createStore(rootReducer, applyMiddleware(myLogger));
+const store = createStore(rootReducer, applyMiddleware(logger, myLogger));
 
 export default store;
