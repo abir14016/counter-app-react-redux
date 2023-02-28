@@ -2,17 +2,15 @@
 import { INCREMENT, DECREMENT } from "./actionTypes"
 
 //increment action
-export const increment = (value) => {
+export const increment = () => {
     return {
         type: INCREMENT,
-        payLoad: value
     };
 };
 
 //decrement action
-export const decrement = (value) => {
+export const decrement = () => {
     return {
         type: DECREMENT,
-        payLoad: value
     };
 };
